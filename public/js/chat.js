@@ -40,10 +40,8 @@ const autoscroll = () => {
 
   // adding by visibleHeight allows us to compensate for
   if (containerHeight - newMessageHeight <= scrollOffset) {
-    // accounting for newMessageHeight - otherwise we would not scroll down to bottom only to last messaage before the latest.
-    // checking against scrollOffset allows us to ensure that the user was already at the bottom before the new message arrived. Otherwise, we assume that are viewing an older message, and we will not autoscroll for them at this time.
+    // if user is at the bottom of the window, then scroll to latest message:
     $messages.scrollTop = $messages.scrollHeight // fires autoscroll, and scrolls window to bottom.
-
   }
 
   console.log(newMessageMargin, newMessageHeight)
