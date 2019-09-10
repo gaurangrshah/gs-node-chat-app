@@ -1,0 +1,7 @@
+#Ignore:
+node_modules/
+config
+.DS_Store
+.vscode/
+*.theia
+*.env
